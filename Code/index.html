@@ -2,31 +2,63 @@
 <!-- Pixel Art Maker project by Mila K-L -->
 <!-- January 2018 -->
 <html>
+
 <head>
-    <title>Pixel Art Maker!</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catanaran|Joti+One|Sedgwick+Ave+Display">
-    <link rel="stylesheet" href="styles.css">
-    <script src="jquery-3.2.1.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pixel Art Maker!</title>
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catanaran|Joti+One|Sedgwick+Ave+Display">
+  <link rel="stylesheet" href="styles.css">
+  <script src="jquery-3.2.1.js"></script>
 </head>
-<body>
-    <h1>Lab: Pixel Art Maker</h1>
 
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="input_height" name="height" min="2" max="200" value="35">
-        Grid Width:
-        <input type="number" id="input_width" name="width" min="2" max="200" value="35">
-        <input type="submit">
-    </form>
+<body class="mdc-typography">
+  <h1>Lab: Pixel Art Maker</h1>
 
-    <h2>Pick A Colour</h2>
-    <input type="color" id="colorPicker" value="#009193">
+  <h2 class="mdc-typography--display1">Choose Grid Size</h2>
+  <form id="sizePicker">
 
-    <h2>Design Canvas</h2>
-    <h5>One click to colour, double click to remove colour</h5>
-    <table id="pixelCanvas"></table>
 
-    <script src="designs.js"></script>
+    <div class="mdc-form-field">
+      <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+        <input id="input_height" type="number" class="mdc-text-field__input" min="2" max="200" value="35">
+        <label for="input_height" class="mdc-text-field__label">
+                  Grid Height:
+                </label>
+        <div class="mdc-text-field__bottom-line"></div>
+      </div>
+    </div>
+
+    <div class="mdc-form-field">
+      <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+        <input id="input_width" type="number" class="mdc-text-field__input" min="2" max="200" value="35">
+        <label for="input_width" class="mdc-text-field__label">
+                        Grid Width:
+                      </label>
+        <div class="mdc-text-field__bottom-line"></div>
+      </div>
+    </div>
+
+
+    <input type="submit" class="mdc-button
+                   mdc-button--raised
+                   mdc-ripple-surface" data-mdc-auto-init="MDCRipple">
+  </form>
+
+  <h2 class="mdc-typography--display1">Pick A Colour</h2>
+  <input type="color" id="colorPicker" class="mdc-elevation--z4" value="#009193">
+
+  <h2 class="mdc-typography--display1">Design Canvas</h2>
+  <h5 class="mdc-typography--subheading1">One click to colour, double click to remove colour</h5>
+  <table class="mdc-elevation--z10" id="pixelCanvas"></table>
+
+  <script src="designs.js"></script>
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <script>
+    window.mdc.autoInit();
+  </script>
 </body>
+
 </html>
