@@ -1,20 +1,49 @@
-// Select color input
-// Select size input
+// Pixel Art Maker project by Mila K-L
+// January 2018
 
-// When size is submitted by the user, call makeGrid()
+// Variables
+var selectedColour = $("#colorPicker").val();
+var pixelCanvas = $("#pixelCanvas");
 var isPointerDown = false;
-$("#pixelCanvas").mousedown(function(ev) {
+
+// Events
+// Draw when dragging
+pixelCanvas.mousedown(function(ev) {
   isPointerDown = true;
 });
 
-$("#pixelCanvas").mouseup(function(ev) {
+pixelCanvas.mouseup(function(ev) {
   isPointerDown = false;
 });
 
+pixelCanvas.mouseleave(function(ev) {
+  isPointerDown = false;
+});
+
+// Draw when click
+pixelCanvas.on("click", "td", function(event) {
+  event.preventDefault();
+  colourCell($(this));
+});
+
+// Clear cell
+pixelCanvas.on("dblclick", "td", function(event) {
+  var cell = $(this);
+  cell.css("background", "");
+});
+
+// Selecting colour
+pixelCanvas.on("change", function(event) {
+  selectedColour = $("#colorPicker").val();
+
+});
+
+// Functions
+// Creating a grid
 function makeGrid(rows, columns) {
   for (var i = 0; i < rows; i++) {
     var tr = document.createElement('tr');
-    $("#pixelCanvas").append(tr);
+    pixelCanvas.append(tr);
     for (var j = 0; j < columns; j++) {
       var td = document.createElement('td');
       tr.append(td);
@@ -28,12 +57,13 @@ function makeGrid(rows, columns) {
   }
 }
 
+// Clear grid
 function clearGrid() {
-  $("#pixelCanvas").empty();
+  pixelCanvas.empty();
 }
 
+// Creating grid based on user selection
 $("#sizePicker").submit(function(event) {
-  console.log("Size picker called");
   clearGrid();
   var height = $("#input_height").val();
   var width = $("#input_width").val();
@@ -42,19 +72,7 @@ $("#sizePicker").submit(function(event) {
 
 });
 
+// Colouring cells
 function colourCell(cell) {
   cell.css("background", selectedColour);
 }
-
-$("#pixelCanvas").on("click", "td", function(event) {
-  event.preventDefault();
-  colourCell($(this));
-});
-
-var defaultColour = "green";
-var selectedColour = $("#colorPicker").val();
-
-$("#colorPicker").on("change", function(event) {
-  selectedColour = $("#colorPicker").val();
-
-});
