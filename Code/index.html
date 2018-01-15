@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     :root {
-      --mdc-theme-primary: #0097A7;
+      --mdc-theme-primary: #38817A;
     }
   </style>
   <script src="jquery-3.2.1.js"></script>
@@ -33,10 +33,10 @@
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner">
 
-        <div class="mdc-layout-grid__cell--span-2">
+        <div class="mdc-layout-grid__cell--span-3">
           <div class="mdc-card inputsCard">
 
-            <h2 class="mdc-typography--display1">Choose Grid Size</h2>
+            <h2 class="mdc-card__title--large">Choose Grid Size</h2>
             <form id="sizePicker">
 
 
@@ -44,7 +44,7 @@
                 <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
                   <input id="input_height" type="number" class="mdc-text-field__input" min="2" max="200" value="">
                   <label for="input_height" class="mdc-text-field__label">
-                    Grid Height:
+                    Height
                   </label>
                   <div class="mdc-text-field__bottom-line"></div>
                 </div>
@@ -54,49 +54,46 @@
                 <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
                   <input id="input_width" type="number" class="mdc-text-field__input" min="2" max="200" value="">
                   <label for="input_width" class="mdc-text-field__label">
-                          Grid Width:
+                          Width
                         </label>
                   <div class="mdc-text-field__bottom-line"></div>
                 </div>
               </div>
 
 
-              <input type="submit" class="mdc-button
+              <input type="submit" class="mdc-button myButton
                      mdc-button--raised
-                     mdc-ripple-surface" data-mdc-auto-init="MDCRipple">
+                     mdc-ripple-surface" value="Resize" data-mdc-auto-init="MDCRipple">
             </form>
 
-            <h2 class="mdc-typography--display1">Pick A Colour</h2>
+            <h2 class="mdc-card__title--large colourPickerTitle">Pick a Colour</h2>
             <input type="color" id="colorPicker" class="mdc-elevation--z4" value="#009193">
 
           </div>
         </div>
 
-        <div class="mdc-layout-grid__cell--span-10">
+        <div class="mdc-layout-grid__cell--span-9">
 
-          <div class="mdc-form-field">
-  <div class="mdc-checkbox">
-    <input type="checkbox"
-           id="my-checkbox"
-           class="mdc-checkbox__native-control" checked/>
-    <div class="mdc-checkbox__background">
-      <svg class="mdc-checkbox__checkmark"
-           viewBox="0 0 24 24">
+          <div class="mdc-form-field floatCheckbox">
+            <div class="mdc-checkbox">
+              <input type="checkbox" id="my-checkbox" class="mdc-checkbox__native-control" checked/>
+              <div class="mdc-checkbox__background">
+                <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
         <path class="mdc-checkbox__checkmark__path"
               fill="none"
               stroke="white"
               d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
       </svg>
-      <div class="mdc-checkbox__mixedmark"></div>
-    </div>
-  </div>
+                <div class="mdc-checkbox__mixedmark"></div>
+              </div>
+            </div>
 
-  <label for="my-checkbox">Show Grid</label>
-</div>
+            <label for="my-checkbox">Show Grid</label>
+          </div>
 
 
-          <h2 class="mdc-typography--display1">Design Canvas</h2>
-          <h5 class="mdc-typography--subheading1">One click to colour, double click to remove colour</h5>
+          <h2 class="mdc-card__title--large">Design Canvas</h2>
+          <h5 class="mdc-card__subtitle">One click to colour, double click to remove colour</h5>
           <table class="mdc-elevation--z10" id="pixelCanvas"></table>
         </div>
 
@@ -105,10 +102,6 @@
 
 
   </main>
-
-
-
-
 
   <script src="designs.js"></script>
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>

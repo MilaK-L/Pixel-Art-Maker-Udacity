@@ -2,11 +2,18 @@
 // January 2018
 
 // Variables
+const defaultCanvasHeight = 25;
+const defaultCanvasWidth = 35;
 var selectedColour = $("#colorPicker").val();
 var pixelCanvas = $("#pixelCanvas");
 var isPointerDown = false;
 
 // Events
+// Initial Canvas
+$( document ).ready(function() {
+    makeGrid(defaultCanvasHeight, defaultCanvasWidth);
+});
+
 // Draw when dragging
 pixelCanvas.mousedown(function(ev) {
   isPointerDown = true;

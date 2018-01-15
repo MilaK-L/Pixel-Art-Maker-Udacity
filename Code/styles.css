@@ -3,7 +3,7 @@
 /*January 2018*/
 
 body {
-  background-color: #F5FAC8
+  background-color: #F7F39A;
 }
 
 .myTitle {
@@ -19,28 +19,17 @@ body {
 }
 
 .inputsCard {
-  background-color: #B2EBF2;
+  padding: 16px;
+  background-color: #E1F6D6;
+  margin-top: 78px;
 }
 
-h1 {
-  font-family: Joti One, cursive;
-  font-size: 70px;
-  margin: 0.2em;
-  color: #539092;
-}
-
-h2 {
-  margin: 1em 0 0.25em;
-  font-family: Catamaran, sans-serif;
-  color: #212121;
-}
-
-h2:first-of-type {
-  margin-top: 0.5em;
+.colourPickerTitle {
+  margin-top: 40px;
 }
 
 table, tr, td {
-  border: 1px solid black;
+  border: 1px solid #346473;
 }
 
 table {
@@ -56,6 +45,10 @@ td {
   width: 20px;
 }
 
+.floatCheckbox {
+  float: left;
+  margin-left: 40px;
+}
 
 input[type=number] {
   width: 6em;
@@ -69,11 +62,16 @@ input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
 
+.myButton {
+  margin: 24px auto;
+}
+
 input[type="color"] {
   -webkit-appearance: none;
   border: none;
-  width: 55px;
-  height: 30px;
+  width: 56px;
+  height: 32px;
+  margin: 24px auto;
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -86,7 +84,4 @@ input[type="color"]::-webkit-color-swatch {
 
 input:focus, select:focus, textarea:focus, button:focus {
   outline: none;
-}
-#sizePicker>button {
-  margin-top: 10px;
 }
