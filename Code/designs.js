@@ -33,7 +33,7 @@ pixelCanvas.on("dblclick", "td", function(event) {
 });
 
 // Selecting colour
-pixelCanvas.on("change", function(event) {
+$("#colorPicker").on("change", function(event) {
   selectedColour = $("#colorPicker").val();
 
 });

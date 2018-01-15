@@ -2,9 +2,21 @@
 
 /*January 2018*/
 
+
 body {
   text-align: center;
   background-color: #F5FAC8
+}
+
+.mdc-toolbar__title {
+  font-family: Joti One, cursive;
+  font-size: 70px;
+  margin: 0.25em 0 0.25em;
+  color: #FFEB3B;
+}
+
+.mainContent {
+  margin-top: 120px;
 }
 
 h1 {
@@ -17,6 +29,7 @@ h1 {
 h2 {
   margin: 1em 0 0.25em;
   font-family: Catamaran, sans-serif;
+  color: #212121;
 }
 
 h2:first-of-type {
@@ -29,7 +42,7 @@ table, tr, td {
 
 table {
   border-collapse: collapse;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 tr {
@@ -38,6 +51,18 @@ tr {
 
 td {
   width: 20px;
+}
+
+.controlsLayout {
+margin: 30px auto;
+border: none;
+}
+.column {
+  width: 500px;
+  border: none;
+}
+.row {
+  border: none;
 }
 
 input[type=number] {
@@ -57,4 +82,8 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 
 input[type="color"]::-webkit-color-swatch {
   border: none;
+}
+
+#sizePicker>button {
+  margin-top: 10px;
 }
