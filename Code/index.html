@@ -24,49 +24,72 @@
   <header class="mdc-toolbar mdc-toolbar--fixed">
     <div class="mdc-toolbar__row">
       <section class="mdc-toolbar__section mdc-toolbar__section--align-centre">
-        <span class="mdc-toolbar__title">Pixel Art Maker</span>
+        <span class="mdc-toolbar__title myTitle">Pixel Art Maker</span>
       </section>
     </div>
   </header>
+
   <main class="mdc-toolbar-fixed-adjust mainContent">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
 
-          <h2 class="mdc-typography--display1">Choose Grid Size</h2>
-          <form id="sizePicker">
+        <div class="mdc-layout-grid__cell--span-2">
+          <div class="mdc-card inputsCard">
+
+            <h2 class="mdc-typography--display1">Choose Grid Size</h2>
+            <form id="sizePicker">
 
 
-            <div class="mdc-form-field">
-              <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
-                <input id="input_height" type="number" class="mdc-text-field__input" min="2" max="200" value="">
-                <label for="input_height" class="mdc-text-field__label">
-                        Grid Height:
-                      </label>
-                <div class="mdc-text-field__bottom-line"></div>
+              <div class="mdc-form-field">
+                <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+                  <input id="input_height" type="number" class="mdc-text-field__input" min="2" max="200" value="">
+                  <label for="input_height" class="mdc-text-field__label">
+                    Grid Height:
+                  </label>
+                  <div class="mdc-text-field__bottom-line"></div>
+                </div>
               </div>
-            </div>
 
-            <div class="mdc-form-field">
-              <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
-                <input id="input_width" type="number" class="mdc-text-field__input" min="2" max="200" value="">
-                <label for="input_width" class="mdc-text-field__label">
-                              Grid Width:
-                            </label>
-                <div class="mdc-text-field__bottom-line"></div>
+              <div class="mdc-form-field">
+                <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+                  <input id="input_width" type="number" class="mdc-text-field__input" min="2" max="200" value="">
+                  <label for="input_width" class="mdc-text-field__label">
+                          Grid Width:
+                        </label>
+                  <div class="mdc-text-field__bottom-line"></div>
+                </div>
               </div>
-            </div>
 
 
-            <input type="submit" class="mdc-button
-                         mdc-button--raised
-                         mdc-ripple-surface" data-mdc-auto-init="MDCRipple">
-          </form>
+              <input type="submit" class="mdc-button
+                     mdc-button--raised
+                     mdc-ripple-surface" data-mdc-auto-init="MDCRipple">
+            </form>
 
-          <h2 class="mdc-typography--display1">Pick A Colour</h2>
-          <input type="color" id="colorPicker" class="mdc-elevation--z4" value="#009193">
+            <h2 class="mdc-typography--display1">Pick A Colour</h2>
+            <input type="color" id="colorPicker" class="mdc-elevation--z4" value="#009193">
 
-    <h2 class="mdc-typography--display1">Design Canvas</h2>
-    <h5 class="mdc-typography--subheading1">One click to colour, double click to remove colour</h5>
-    <table class="mdc-elevation--z10" id="pixelCanvas"></table>
+          </div>
+        </div>
+
+        <div class="mdc-layout-grid__cell--span-10">
+
+
+
+          <h2 class="mdc-typography--display1">Design Canvas</h2>
+          <h5 class="mdc-typography--subheading1">One click to colour, double click to remove colour</h5>
+          <table class="mdc-elevation--z10" id="pixelCanvas"></table>
+        </div>
+
+      </div>
+    </div>
+
+
   </main>
+
+
+
+
 
   <script src="designs.js"></script>
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>

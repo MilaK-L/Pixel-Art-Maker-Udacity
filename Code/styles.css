@@ -2,13 +2,11 @@
 
 /*January 2018*/
 
-
 body {
-  text-align: center;
   background-color: #F5FAC8
 }
 
-.mdc-toolbar__title {
+.myTitle {
   font-family: Joti One, cursive;
   font-size: 70px;
   margin: 0.25em 0 0.25em;
@@ -17,6 +15,11 @@ body {
 
 .mainContent {
   margin-top: 120px;
+  text-align: center;
+}
+
+.inputsCard {
+  background-color: #B2EBF2;
 }
 
 h1 {
@@ -53,27 +56,17 @@ td {
   width: 20px;
 }
 
-.controlsLayout {
-margin: 30px auto;
-border: none;
-}
-.column {
-  width: 500px;
-  border: none;
-}
-.row {
-  border: none;
-}
 
 input[type=number] {
   width: 6em;
 }
 
 input[type=number]::-webkit-outer-spin-button {
-    display: none;
+  display: none;
 }
+
 input[type=number]::-webkit-inner-spin-button {
-    display: none;
+  display: none;
 }
 
 input[type="color"] {
@@ -91,13 +84,9 @@ input[type="color"]::-webkit-color-swatch {
   border: none;
 }
 
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: none;
 }
-
 #sizePicker>button {
   margin-top: 10px;
 }
