@@ -91,6 +91,13 @@ input[type="color"]::-webkit-color-swatch {
   border: none;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 #sizePicker>button {
   margin-top: 10px;
 }
