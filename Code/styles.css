@@ -3,14 +3,37 @@
 /*January 2018*/
 
 body {
-  background-color: #F7F39A;
+  /*background-color: #F7F39A;*/
+  background-color: #74A679;
+
+}
+.myFont {
+color: #F4F1D0;
+
+}
+.myToolbar {
+  background-color: #222;
 }
 
 .myTitle {
-  font-family: Joti One, cursive;
+  font-family: Stalinist One, cursive;
   font-size: 70px;
   margin: 0.25em 0 0.25em;
-  color: #FFEB3B;
+  /*color: #FFEB3B;*/
+  color: #F4F1D0;
+}
+
+.app-fab--absolute {
+  position: fixed;
+  top: 7rem;
+  right: 1rem;
+}
+
+@media(min-width: 1024px) {
+   .app-fab--absolute {
+    top: 7.5rem;
+    right: 1.5rem;
+  }
 }
 
 .mainContent {
@@ -20,7 +43,7 @@ body {
 
 .inputsCard {
   padding: 16px;
-  background-color: #E1F6D6;
+  background-color: #426347;
   margin-top: 78px;
 }
 
@@ -33,13 +56,13 @@ body {
 }
 
 table, tr, td {
-  border: 1px solid #346473;
+  border: 1px solid #222;
 }
 
 table {
   border-collapse: collapse;
   margin: 30px auto;
-  border: 2px solid #346473;
+  border: 2px solid #222;
 }
 
 tr {

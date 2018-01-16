@@ -10,19 +10,20 @@
   <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catanaran|Joti+One|Sedgwick+Ave+Display">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Stalinist One|Joti+One|Sedgwick+Ave+Display|Righteous">
   <link rel="stylesheet" href="styles.css">
   <style>
     :root {
-      --mdc-theme-primary: #38817A;
+      --mdc-theme-primary: #a674a3;
     }
   </style>
   <script src="jquery-3.2.1.js"></script>
 </head>
 
-<body class="mdc-typography">
+<body class="mdc-typography myFont">
 
-  <header class="mdc-toolbar mdc-toolbar--fixed">
+  <header class="mdc-toolbar mdc-toolbar--fixed myToolbar">
     <div class="mdc-toolbar__row">
       <section class="mdc-toolbar__section mdc-toolbar__section--align-centre">
         <span class="mdc-toolbar__title myTitle">Pixel Art Maker</span>
@@ -69,14 +70,14 @@
             </form>
 
             <h2 class="mdc-card__title--large colourPickerTitle">Pick a Colour</h2>
-            <input type="color" id="colorPicker" class="mdc-elevation--z4" value="#009193">
+            <input type="color" id="colorPicker" class="mdc-elevation--z4" value="#a674a3">
 
           </div>
         </div>
 
         <div class="mdc-layout-grid__cell--span-9">
 
-          <div class="mdc-form-field floatCheckbox">
+          <div class="mdc-form-field floatCheckbox myFont">
             <div class="mdc-checkbox">
               <input type="checkbox" id="my-checkbox" class="mdc-checkbox__native-control" checked/>
               <div class="mdc-checkbox__background">
@@ -95,15 +96,16 @@
 
 
           <h2 class="mdc-card__title--large extraPadding">Design Canvas</h2>
-          <h5 class="mdc-card__subtitle extraPadding">One click to colour, double click to remove</h5>
+          <h5 class="mdc-card__subtitle myFont extraPadding">One click to colour, double click to remove</h5>
           <table class="mdc-elevation--z8" id="pixelCanvas"></table>
         </div>
 
       </div>
     </div>
-    <button id = "downloadButton" class="mdc-fab material-icons" aria-label="Favorite">
+    <button id="downloadButton" class="mdc-fab material-icons app-fab--absolute" aria-label="File Download">
+
       <span class="mdc-fab__icon">
-        favorite
+        file_download
       </span>
     </button>
 
