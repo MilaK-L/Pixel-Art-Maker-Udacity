@@ -33,6 +33,18 @@ pixelCanvas.on("click", "td", function(event) {
   colourCell($(this));
 });
 
+// Download your Art
+$( "#downloadButton" ).click(function() {
+  html2canvas(document.querySelector("#pixelCanvas")).then(canvas => {
+
+
+let link = document.createElement('a');
+        link.download = "YourPixArtWork.png";
+        link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        link.click();
+});
+});
+
 // Clear cell
 pixelCanvas.on("dblclick", "td", function(event) {
   var cell = $(this);
