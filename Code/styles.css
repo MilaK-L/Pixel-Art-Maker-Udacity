@@ -3,23 +3,31 @@
 /*January 2018*/
 
 body {
-  /*background-color: #F7F39A;*/
-  background-color: #74A679;
-
+  /*background-color: #74A679;*/
 }
-.myFont {
-color: #F4F1D0;
 
+:root {
+  --mdc-theme-primary: #a674a3;
+  --mdc-theme-background: #74A679;
+  --mdc-theme-secondary: #a674a3;
 }
+
+.mdc-text-field__bottom-line {
+  color: #F4F1D0;
+}
+
+.myFontColour {
+  color: #F4F1D0;
+}
+
 .myToolbar {
   background-color: #222;
 }
 
 .myTitle {
   font-family: Stalinist One, cursive;
-  font-size: 70px;
+  font-size: 62px;
   margin: 0.25em 0 0.25em;
-  /*color: #FFEB3B;*/
   color: #F4F1D0;
 }
 
@@ -30,7 +38,7 @@ color: #F4F1D0;
 }
 
 @media(min-width: 1024px) {
-   .app-fab--absolute {
+  .app-fab--absolute {
     top: 7.5rem;
     right: 1.5rem;
   }
@@ -43,7 +51,9 @@ color: #F4F1D0;
 
 .inputsCard {
   padding: 16px;
-  background-color: #426347;
+  /*background-color: #426347;*/
+  background-color: #222;
+  background: rgba(34, 34, 34 0.3);
   margin-top: 78px;
 }
 
@@ -63,6 +73,7 @@ table {
   border-collapse: collapse;
   margin: 30px auto;
   border: 2px solid #222;
+  background: rgba(66, 99, 71, 0.3);
 }
 
 tr {

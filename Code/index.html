@@ -9,19 +9,13 @@
   <title>Pixel Art Maker!</title>
   <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Stalinist One|Joti+One|Sedgwick+Ave+Display|Righteous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Stalinist One|Joti+One|Roboto:300,400,500|Righteous">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    :root {
-      --mdc-theme-primary: #a674a3;
-    }
-  </style>
+
   <script src="jquery-3.2.1.js"></script>
 </head>
 
-<body class="mdc-typography myFont">
+<body class="mdc-typography mdc-theme--background myFontColour">
 
   <header class="mdc-toolbar mdc-toolbar--fixed myToolbar">
     <div class="mdc-toolbar__row">
@@ -44,23 +38,28 @@
 
               <div class="mdc-form-field">
                 <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
-                  <input id="input_height" type="number" class="mdc-text-field__input" min="2" max="200" value="">
-                  <label for="input_height" class="mdc-text-field__label">
+                  <input id="input_height" type="number" class="mdc-text-field__input myFontColour" min="2" max="100" value="">
+                  <label for="input_height" class="mdc-text-field__label myFontColour">
                     Height
                   </label>
                   <div class="mdc-text-field__bottom-line"></div>
                 </div>
+
+
               </div>
 
               <div class="mdc-form-field">
                 <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
-                  <input id="input_width" type="number" class="mdc-text-field__input" min="2" max="200" value="">
-                  <label for="input_width" class="mdc-text-field__label">
+                  <input id="input_width" type="number" class="mdc-text-field__input myFontColour " min="2" max="100" value="">
+                  <label for="input_width" class="mdc-text-field__label myFontColour">
                           Width
                         </label>
                   <div class="mdc-text-field__bottom-line"></div>
                 </div>
+
+
               </div>
+
 
               <div>
                 <input type="submit" class="mdc-button myButton
@@ -77,7 +76,7 @@
 
         <div class="mdc-layout-grid__cell--span-9">
 
-          <div class="mdc-form-field floatCheckbox myFont">
+          <div class="mdc-form-field floatCheckbox myFontColour">
             <div class="mdc-checkbox">
               <input type="checkbox" id="my-checkbox" class="mdc-checkbox__native-control" checked/>
               <div class="mdc-checkbox__background">
@@ -96,13 +95,13 @@
 
 
           <h2 class="mdc-card__title--large extraPadding">Design Canvas</h2>
-          <h5 class="mdc-card__subtitle myFont extraPadding">One click to colour, double click to remove</h5>
+          <h5 class="mdc-card__subtitle myFontColour extraPadding">One click to colour, double click to remove</h5>
           <table class="mdc-elevation--z8" id="pixelCanvas"></table>
         </div>
 
       </div>
     </div>
-    <button id="downloadButton" class="mdc-fab material-icons app-fab--absolute" aria-label="File Download">
+    <button id="downloadButton" class="mdc-fab material-icons app-fab--absolute mdc-theme--primary-bg" aria-label="File Download">
 
       <span class="mdc-fab__icon">
         file_download
@@ -112,6 +111,7 @@
     <div class="footer mdc-typography--caption">
       <p>Made by Mila K-L for Udacity FEWD course</p>
     </div>
+
 
   </main>
 
