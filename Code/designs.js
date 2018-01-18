@@ -37,7 +37,6 @@ pixelCanvas.on("click", "td", function(event) {
 $("#downloadButton").click(function() {
   html2canvas(document.querySelector("#pixelCanvas")).then(canvas => {
 
-
     let link = document.createElement('a');
     link.download = "YourPixelMasterpiece.png";
     link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
@@ -56,6 +55,11 @@ $("#colorPicker").on("change", function(event) {
   selectedColour = $("#colorPicker").val();
 
 });
+
+// Show grid checkbox checked/unchecked
+$('#my-checkbox').click(function() {
+  updateGridBorders();
+})
 
 // Functions
 // Creating a grid
@@ -107,11 +111,8 @@ function colourCell(cell) {
 function updateGridBorders() {
   var checkBox = $("#my-checkbox");
   if (checkBox.is(":checked")) {
-    pixelCanvas.find("td").css("border-width", "1px");
+    pixelCanvas.find("td").css({"border-width": "1px", "height": "20px", "width": "20px"});
   } else {
-    pixelCanvas.find("td").css("border-width", "0px");
+    pixelCanvas.find("td").css({"border-width": "0px", "height": "21px", "width": "21px"});
   }
 }
-$('#my-checkbox').click(function() {
-  updateGridBorders();
-})
