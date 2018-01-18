@@ -12,10 +12,6 @@ body {
   --mdc-theme-secondary: #a674a3;
 }
 
-.mdc-text-field__bottom-line {
-  color: #F4F1D0;
-}
-
 .myFontColour {
   color: #F4F1D0;
 }
@@ -30,6 +26,18 @@ body {
   margin: 0.25em 0 0.25em;
   color: #F4F1D0;
 }
+
+
+.header-link {
+  position: relative;
+  top: 65%;
+  left: 90%;
+  transform: translateY(-50%);
+   -webkit-transform: translateY(-50%);
+  font-size: 14px;
+}
+
+
 
 .app-fab--absolute {
   position: fixed;
