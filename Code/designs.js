@@ -10,8 +10,8 @@ var isPointerDown = false;
 
 // Events
 // Initial Canvas
-$( document ).ready(function() {
-    makeGrid(defaultCanvasHeight, defaultCanvasWidth);
+$(document).ready(function() {
+  makeGrid(defaultCanvasHeight, defaultCanvasWidth);
 });
 
 // Draw when dragging
@@ -34,15 +34,15 @@ pixelCanvas.on("click", "td", function(event) {
 });
 
 // Download your Art
-$( "#downloadButton" ).click(function() {
+$("#downloadButton").click(function() {
   html2canvas(document.querySelector("#pixelCanvas")).then(canvas => {
 
 
-let link = document.createElement('a');
-        link.download = "YourPixArtWork.png";
-        link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-        link.click();
-});
+    let link = document.createElement('a');
+    link.download = "YourPixelMasterpiece.png";
+    link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    link.click();
+  });
 });
 
 // Clear cell
@@ -60,6 +60,12 @@ $("#colorPicker").on("change", function(event) {
 // Functions
 // Creating a grid
 function makeGrid(rows, columns) {
+  if (rows < 2 || columns < 2) {
+    alert("Please provide Grid Size");
+    return;
+  }
+
+  clearGrid();
   for (var i = 0; i < rows; i++) {
     var tr = document.createElement('tr');
     pixelCanvas.append(tr);
@@ -74,6 +80,7 @@ function makeGrid(rows, columns) {
       });
     }
   }
+  updateGridBorders();
 }
 
 // Clear grid
@@ -83,7 +90,7 @@ function clearGrid() {
 
 // Creating grid based on user selection
 $("#sizePicker").submit(function(event) {
-  clearGrid();
+
   var height = $("#input_height").val();
   var width = $("#input_width").val();
   makeGrid(height, width);
@@ -95,3 +102,16 @@ $("#sizePicker").submit(function(event) {
 function colourCell(cell) {
   cell.css("background", selectedColour);
 }
+
+// Show/hide Grid inside Canvas
+function updateGridBorders() {
+  var checkBox = $("#my-checkbox");
+  if (checkBox.is(":checked")) {
+    pixelCanvas.find("td").css("border-width", "1px");
+  } else {
+    pixelCanvas.find("td").css("border-width", "0px");
+  }
+}
+$('#my-checkbox').click(function() {
+  updateGridBorders();
+})
