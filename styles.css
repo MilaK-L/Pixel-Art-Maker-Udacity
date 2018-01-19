@@ -2,9 +2,6 @@
 
 /*January 2018*/
 
-body {
-  /*background-color: #74A679;*/
-}
 
 :root {
   --mdc-theme-primary: #a674a3;
@@ -63,7 +60,6 @@ body {
 
 .inputsCard {
   padding: 16px;
-  /*background-color: #426347;*/
   background-color: #222;
   background: rgba(34, 34, 34 0.3);
   margin-top: 78px;

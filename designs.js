@@ -15,15 +15,15 @@ $(document).ready(function() {
 });
 
 // Draw when dragging
-pixelCanvas.mousedown(function(ev) {
+pixelCanvas.mousedown(function() {
   isPointerDown = true;
 });
 
-pixelCanvas.mouseup(function(ev) {
+pixelCanvas.mouseup(function() {
   isPointerDown = false;
 });
 
-pixelCanvas.mouseleave(function(ev) {
+pixelCanvas.mouseleave(function() {
   isPointerDown = false;
 });
 
@@ -51,7 +51,7 @@ pixelCanvas.on("dblclick", "td", function(event) {
 });
 
 // Selecting colour
-$("#colorPicker").on("change", function(event) {
+$("#colorPicker").on("change", function() {
   selectedColour = $("#colorPicker").val();
 
 });
@@ -76,8 +76,8 @@ function makeGrid(rows, columns) {
     for (var j = 0; j < columns; j++) {
       var td = document.createElement('td');
       tr.append(td);
-      td.addEventListener("pointerenter", function(ev) {
-        if (isPointerDown === true) {
+      td.addEventListener("pointerenter", function() {
+        if (isPointerDown) {
           colourCell($(this));
         }
 
