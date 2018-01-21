@@ -15,7 +15,8 @@ $(document).ready(function() {
 });
 
 // Draw when dragging
-pixelCanvas.mousedown(function() {
+pixelCanvas.mousedown(function(event) {
+  event.preventDefault();
   isPointerDown = true;
 });
 
